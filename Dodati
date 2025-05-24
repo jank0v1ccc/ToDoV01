@@ -1,0 +1,30 @@
+import java.util.*;
+import java.io.*;
+
+public class Dodati {
+    public void dodoati() throws IOException {
+
+        Scanner scanner = new Scanner(System.in);
+        FileWriter writer = new FileWriter("C:\\Users\\Milan\\intelijfiletxt\\ToDo.txt",true);
+        System.out.println("unesite zadatak");
+        String z = scanner.nextLine();
+        System.out.println("do kada je rok da to uradite ili kada je tacan datum ako nemate datum ukucajte /");
+        String d = scanner.nextLine();
+        System.out.println("ispisuje");
+        try{
+            if (d.equals("/")){
+                writer.write("zadatak je: "+z+"\n");
+                System.out.println("ispisano");
+                writer.close();
+
+            }else {
+                writer.write("zadatak je: "+z+" a datum je: "+d+"\n");
+                System.out.println("ispisano");
+                writer.close();
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+}

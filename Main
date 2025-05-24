@@ -1,0 +1,24 @@
+import java.io.IOException;
+import java.util.*;
+
+public class ToDo {
+    public static void main(String[] args) throws IOException {
+
+        Dodati dodati = new Dodati();
+        Ocitati ocitati = new Ocitati();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("""
+                Da li zelite:
+                1.Dodate zadatak
+                2.Ispisete listu""");
+        String o = scanner.next();
+        if (o.equals("1")){
+            dodati.dodoati();
+        } else if (o.equals("2")) {
+            ocitati.ocitati();
+        }else{
+            System.out.println("pogresno uneta operaciaj");
+        }
+
+    }
+}

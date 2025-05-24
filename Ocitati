@@ -1,0 +1,18 @@
+import java.io.*;
+
+public class Ocitati {
+    public void ocitati() throws FileNotFoundException {
+
+        FileInputStream fs = new FileInputStream("C:\\Users\\Milan\\intelijfiletxt\\ToDo.txt");
+        try{
+            int c =fs.read();
+            while (c!=-1){
+                System.out.print((char) c);
+                c= fs.read();
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+}
